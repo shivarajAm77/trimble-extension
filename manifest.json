@@ -4,6 +4,7 @@
   "description": "Extension to redirect users to CLB Development",
   "version": "1.0.0",
   "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
-  "url": "https://your-hosted-domain.com/index.html",
+  "url": "https://shivarajam77.github.io/trimble-extension/index.html",
   "enabled": true
 }
+
