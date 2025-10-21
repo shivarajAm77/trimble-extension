@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     button.addEventListener('click', () => {
         // Open external link in a new tab
-        window.open('https://dev.virtueleu.us', '_blank');
+        window.open('https://dev.virtuele.us', '_blank');
     });
 
     // Optional: If you want to integrate with Trimble Connect UI API
@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'redirectButton',
             label: 'Go to Virtuele Development',
             onClick: () => {
-                window.open('https://dev.virtueleu.us', '_blank');
+                window.open('https://dev.virtuele.us', '_blank');
             }
         });
     }
 });
+
 
