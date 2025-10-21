@@ -3,17 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     button.addEventListener('click', () => {
         // Open external link in a new tab
-        window.open('https://clbdev.virtueleu.us', '_blank');
+        window.open('https://dev.virtueleu.us', '_blank');
     });
 
     // Optional: If you want to integrate with Trimble Connect UI API
     if (window.TC && TC.UI) {
         TC.UI.addCustomButton({
             id: 'redirectButton',
-            label: 'Go to CLB Development',
+            label: 'Go to Virtuele Development',
             onClick: () => {
-                window.open('https://clbdev.virtueleu.us', '_blank');
+                window.open('https://dev.virtueleu.us', '_blank');
             }
         });
     }
 });
+
