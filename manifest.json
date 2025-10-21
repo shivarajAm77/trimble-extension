@@ -1,10 +1,11 @@
 {
-  "id": "clb-redirect-extension",
-  "title": "CLB Redirect Extension",
-  "description": "Extension to redirect users to CLB Development",
+  "id": "virtuele-redirect-extension",
+  "title": "Virtuele Redirect Extension",
+  "description": "Extension to redirect users to virtule Development",
   "version": "1.0.0",
-  "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
+  "icon": "https://shivarajam77.github.io/trimble-extension/V.json",
   "url": "https://shivarajam77.github.io/trimble-extension/index.html",
   "enabled": true
 }
+
 
