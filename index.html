@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Virtuele site Extension</title>
     <link rel="stylesheet" href="style.css">
+     <script
+        src="https://components.connect.trimble.com/trimble-connect-project-workspace-api/v1/trimble-connect-project-workspace-api.js">
+    </script>
+    <script src="https://connect.trimble.com/extension-sdk.js"></script>
 </head>
 <body>
     <div class="container">
@@ -12,7 +16,14 @@
     </div>
 
     <script src="main.js"></script>
+      <script>
+        Extensions.register('virtuele-redirect-extension', async function (api) {
+            console.log("Extension loaded");
+            window.location.href = "https://clbdev.virtuele.us";
+        });
+    </script>
 </body>
 </html>
+
 
 
