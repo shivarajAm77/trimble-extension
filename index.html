@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Virtuele Redirect Extension</title>
-  <script src="https://components.connect.trimble.com/trimble-connect-project-workspace-api/v1/project-workspace-api.js"></script>
-  <script defer src="script.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    button {
-      background-color: #0063a6;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    button:hover {
-      background-color: #004f83;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <title>Virtuele Redirect Extension</title>
+
+    <!-- Trimble Workspace API -->
+    <script src="https://components.connect.trimble.com/trimble-connect-project-workspace-api/v1/trimble-connect-project-workspace-api.js"></script>
+
+    <!-- Trimble Extension SDK -->
+    <script src="https://connect.trimble.com/extension-sdk.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+    </style>
 </head>
 <body>
-  <h2>Virtuele Redirect Extension</h2>
-  <p>Click below to go to Virtuele CLB Dev site:</p>
-  <button id="redirectBtn">Open Virtuele CLB Dev</button>
+    <h2>Virtuele Redirect Extension</h2>
+    <p>Initializing extension...</p>
+
+    <script>
+        // Register extension with Trimble
+        Extensions.register("virtuele-redirect-extension", async function (api) {
+            console.log("Extension registered.");
+
+            // Create menu object - THIS MAKES THE EXTENSION APPEAR IN THE SIDEBAR
+            const menu = {
+                id: "virtuele-menu",
+                title: "Virtuele Redirect",
+                type: "ExtensionMainMenu",
+                items: [
+                    {
+                        id: "open_redirect",
+                        title: "Open Virtuele",
+                        type: "command"
+                    }
+                ]
+            };
+
+            // Register menu into Trimble UI
+            await api.ui.setMenu(menu);
+            console.log("Menu registered.");
+
+            // Handle menu button click
+            api.extension.onCommand(async function(cmd) {
+                if (cmd === "open_redirect") {
+                    console.log("Redirect command received.");
+                    window.location.href = "https://clbdev.virtuele.us";
+                }
+            });
+
+            // Auto-redirect if you want it immediately:
+            // window.location.href = "https://clbdev.virtuele.us";
+        });
+    </script>
 </body>
 </html>
